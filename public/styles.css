@@ -66,3 +66,26 @@
   margin-left: 5px;
   margin-right: 5px;
 }
+
+.github {
+  margin-top: 40px;
+}
+
+.github a.visit {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: black;
+}
+
+.github a.visit:hover {
+  text-decoration: underline;
+}
+
+.github .buttons {
+  margin-top: 10px;
+}
+
+.buttons > span {
+  margin-left: 6px;
+  margin-right: 6px;
+}
