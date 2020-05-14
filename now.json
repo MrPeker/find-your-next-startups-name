@@ -1,0 +1,44 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "app.js",
+      "use": "@now/node-server",
+      "config": {
+        "includeFiles": [
+          "views/index.pug",
+          "public/styles.css",
+          "public/normalize.css",
+          "public/main.js"
+        ],
+        "bundle": false
+      }
+    },
+    {
+      "src": "public/*",
+      "use": "@now/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/app.js",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/styles.css",
+      "dest": "/app.js",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/normalize.css",
+      "dest": "/public/normalize.css",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/main.js",
+      "dest": "/public/main.js",
+      "methods": ["GET"]
+    }
+  ]
+}

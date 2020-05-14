@@ -6,6 +6,8 @@ const fetch = require("node-fetch");
 let port = process.env.PORT || 3030;
 
 app.set("view engine", "pug");
+app.set("views", path.join(__dirname, "views"));
+
 app.use(express.static("public"));
 
 app.all("*", (req, res) => {
